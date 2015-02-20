@@ -1,7 +1,9 @@
 supervisord
 ===========
 
-This role will install & configure [supervisord](http://supervisord.org/) in any of the specified OS.
+[![Build Status](https://travis-ci.org/lcacciagioni/supervisord.svg?branch=master)](https://travis-ci.org/lcacciagioni/supervisord)
+
+This role will install & configure [supervisord](http://supervisord.org/) in any of the specified OS. Using the corresponding repositories, this implies that only system versions will be installed or EPEL in CentOS case.
 
 Requirements
 ------------
@@ -11,7 +13,7 @@ None
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+None
 
 Dependencies
 ------------
@@ -21,11 +23,13 @@ None
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+You just simply need to include this role in your playbook, no vars needs to be declared.
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```yaml
+- hosts: all
+  roles:
+  - lcacciagioni.supervisord
+```
 
 License
 -------
