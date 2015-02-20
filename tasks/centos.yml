@@ -1,0 +1,20 @@
+---
+- name: Supervisor | CentOS 6 Specific | Install Dependencies
+  yum:
+    name: '{{ item }}'
+    state: latest
+  with_items:
+    - 'http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm'
+    - 'supervisor'
+  when: ansible_distribution == 'CentOS' and ansible_lsb.major_release|int == 6
+  sudo: yes
+ 
+- name: Supervisor | CentOS 7 Specific | Install Dependencies
+  yum:
+    name: '{{ item }}'
+    state: latest
+  with_items:
+    - 'http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm'
+    - 'supervisor'
+  when: ansible_distribution == 'CentOS' and ansible_lsb.major_release|int == 7
+  sudo: yes

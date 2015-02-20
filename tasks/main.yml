@@ -1,2 +1,4 @@
 ---
-# tasks file for lcacciagioni.supervisord
+# In this file we will include all the derivative distros supported
+- include: centos.yml
+- include: ubuntu_debian.yml

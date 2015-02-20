@@ -1,0 +1,12 @@
+---
+- name: Supervisor | Ubuntu / Debian | Install
+  apt: 
+    name: '{{ item }}'
+    cache_valid_time: 3600
+    update_cache: yes
+    state: latest
+  with_items:
+    - 'supervisor'
+  when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
+  sudo: yes
+

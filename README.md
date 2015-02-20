@@ -16,7 +16,7 @@ A description of the settable variables for this role should go here, including 
 Dependencies
 ------------
 
-There is only one dependency: `lcacciagioni.virtualenv`
+None
 
 Example Playbook
 ----------------
